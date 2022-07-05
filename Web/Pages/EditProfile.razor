@@ -8,7 +8,7 @@
     <div class="content-container--white">
         @if (string.IsNullOrEmpty(EditProfileMessage) is false)
         {
-            <BitMessageBar Class="form-message-bar"
+            <BitMessageBar  Class="form-message-bar"
                        MessageBarType="@EditProfileMessageType"
                        OnDismiss="() => EditProfileMessage = null">
                 @EditProfileMessage
@@ -21,7 +21,7 @@
         @if (IsLoadingData)
         {
             <div class="loading-container">
-                <BitSpinner Size="BitSpinnerSize.Large"></BitSpinner>
+                <BitSpinner Size="BitSpinnerSize.Medium"></BitSpinner>
             </div>
         }
         else

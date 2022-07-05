@@ -54,7 +54,7 @@ public static class Services
             options.ForwardedHeaders = ForwardedHeaders.All;
             options.ForwardedHostHeaderName = "X-Host";
         });
-        
+
         services.AddResponseCaching();
 
         services.AddHttpContextAccessor();
@@ -71,11 +71,7 @@ public static class Services
 
         services.AddDbContext<AppDbContext>(options =>
         {
-            options
-            .UseSqlServer(configuration.GetConnectionString("SqlServerConnectionString"), sqlOpt =>
-            {
-                sqlOpt.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
-            });
+            options.UseInMemoryDatabase("AppDb");
         });
 
         services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));

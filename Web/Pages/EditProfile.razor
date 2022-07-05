@@ -8,8 +8,8 @@
     <div class="content-container--white">
         @if (string.IsNullOrEmpty(EditProfileMessage) is false)
         {
-            <BitMessageBar  Class="form-message-bar"
-                       MessageBarType="@EditProfileMessageType"
+            <BitMessageBar Class="form-message-bar"
+                       MessageBarType="BitMessageBarType.Warning"
                        OnDismiss="() => EditProfileMessage = null">
                 @EditProfileMessage
             </BitMessageBar>

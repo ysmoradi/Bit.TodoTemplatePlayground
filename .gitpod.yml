@@ -1,0 +1,6 @@
+image: gitpod/workspace-dotnet
+
+ports:
+  # Default port for the SampleApp
+  - port: 5001
+    onOpen: open-preview
